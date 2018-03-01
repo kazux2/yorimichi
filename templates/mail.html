@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="../static/main.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title>メール</title>
+</head>
+<body>
+    <div class="message">
+        <p>メールが送信されました。</p>
+        <p>以下の順路が最短です。</p>
+        {{text | safe}}
+    </div>
+
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXahp4vQpDDRcyvKzr6LFyw_HLq_i7-cQ&callback=initMap">
+    </script>
+</body>
+</html>

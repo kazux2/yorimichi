@@ -1,0 +1,1 @@
+web: gunicorn saitan_app:app

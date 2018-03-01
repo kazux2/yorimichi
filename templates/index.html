@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="../static/main.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>よりみち順路マップ</title>
+</head>
+
+<body>
+
+<div id="right-panel">
+
+
+<h1>よりみち順路まっぷ<img src="https://pbs.twimg.com/profile_images/658273254684028928/WeiD13qo_400x400.jpg" width="15%" height="15%">
+
+
+<h3>出発:</h3>
+<input placeholder="出発" type="search" name="start" id="start" onkeyup="copyTo('start','start_')" value="渋谷駅"><br>
+
+<h3>よりみちスポット:</h3>
+
+<input placeholder="よりみち" type="search" name="wp" id="wpA" onkeyup="copyTo('wpA','wpA_')" value="ロフト 渋谷店"><br>
+<input placeholder="よりみち" type="search" name="wp"
+    id="wpB" onkeyup="copyTo('wpB','wpB_')" value="Apple 表参道"><br>
+<input placeholder="よりみち" type="search" name="wp"
+    id="wpC" onkeyup="copyTo('wpC','wpC_')" value="こもれび大和田図書館"><br>
+<input placeholder="よりみち" type="search" name="wp"
+    id="wpD" onkeyup="copyTo('wpD','wpD_')" value="東急ハンズ 渋谷店"><br>
+<input placeholder="よりみち" type="search" name="wp"
+    id="wpE" onkeyup="copyTo('wpE','wpE_')" value="タワーレコード 渋谷店"><br>
+
+<h3>ゴール:</h3>
+<input placeholder="ゴール" type="search" id="goal" onkeyup="copyTo('goal','goal_')" value="原宿駅"><br>
+
+<input type="submit" id="search" value='検索'>
+
+</div>
+
+<!--<h3>If you have more than 5 datas, upload csv file with ID and Name column</h3>-->
+<!--<form action="{{url_for('mail')}}" method="post" enctype="multipart/form-data">-->
+<!--<input type="file" name="file"><br>-->
+<!--<button type="submit">Submit</button>-->
+<!--</form>-->
+
+
+
+
+<!--<div id="directions-panel"></div>-->
+
+<div id="map"></div>
+
+<div id="mail">
+    <form action="{{url_for('mail')}}" method="post">
+    <input type="hidden" name="start" id="start_" value="渋谷駅">
+    <input type="hidden" name="wp1" id="wpA_" value="ロフト 渋谷店">
+    <input type="hidden" name="wp2" id="wpB_" value="Apple 表参道">
+    <input type="hidden" name="wp3" id="wpC_"  value="こもれび大和田図書館">
+    <input type="hidden" name="wp4" id="wpD_"  value="東急ハンズ 渋谷店">
+    <input type="hidden" name="wp5" id="wpE_" value="タワーレコード 渋谷店">
+    <input type="hidden" name="goal" id="goal_" value="原宿駅">
+
+    <p>検索結果をメールに送信しますか？</p>
+    <input placeholder="email address" type="email" name="email">
+    <input type="submit" id="send">
+    </form>
+</div>
+
+
+<script type="text/javascript" src="../static/gmap_api.js"></script>
+
+<script>
+function copyTo(fromId, toId)
+{
+var fromTag = document.getElementById(fromId);
+var toTag = document.getElementById(toId);
+toTag.value = fromTag.value;
+}
+</script>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXahp4vQpDDRcyvKzr6LFyw_HLq_i7-cQ&libraries=places&callback=initMap">
+</script>
+
+
+
+</body>
+</html>

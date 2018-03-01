@@ -1,0 +1,109 @@
+/*
+.dark-primary-color    { background: #303F9F; }
+.default-primary-color { background: #3F51B5; }
+.light-primary-color   { background: #C5CAE9; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #9E9E9E; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #757575; }
+.divider-color         { border-color: #BDBDBD; }
+*/
+
+html, body {
+height: 100%;
+width:70%;
+margin: 5px;
+padding: 5px;
+margin-right: auto;
+margin-left : auto;
+font-family: 'Arial',YuGothic,'Yu Gothic','ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN','メイリオ', Meiryo,'ＭＳ ゴシック',sans-serif;
+}
+
+h1 {
+color:
+}
+h3{
+color: #183152;
+}
+
+/*出発、ゴール入力欄*/
+input[id="start"], input[id="goal"]{
+padding: 7px 7px;
+margin: 5px;
+font-size: 1.03em;
+background-color: #FFFFFF;
+color: 375D81;
+border: 3px solid #303F9F;
+}
+
+/*寄り道入力欄*/
+input[name="wp"] {
+padding: 7px 7px;
+margin: 5px;
+font-size: 1.03em;
+background-color: #FFFFFF;
+color: 375D81;
+border: 3px solid #C5CAE9;
+}
+
+/*検索ボタン*/
+input#search {
+padding: 10px 30px;
+margin: 10px;
+font-size: 1.1em;
+background-color: #3F51B5;
+color: #FFFFFF;
+border-style: none;
+}
+
+#map {
+height: 70%;
+width: 70%;
+margin: 20px;
+padding: 20px;
+}
+
+#mail{
+padding-bottom: 100px;
+}
+
+/*メール*/
+input[name="email"]{
+padding: 7px 7px;
+margin: 5px;
+font-size: 1.03em;
+background-color: #FFFFFF;
+color: 375D81;
+border: 3px solid #303F9F;
+}
+
+/*送信ボタン*/
+input#send {
+padding: 10px 30px;
+margin: 10px;
+font-size: 1.1em;
+background-color: #3F51B5;
+color: #FFFFFF;
+border-style: none;
+}
+
+/*
+#directions-panel {
+margin: 10px;
+background-color: #FFEE77;
+padding: 10px;
+}*/
+
+
+@media screen and ( max-width:479px )
+{
+html, body {
+height: 100%;
+width:95%;
+margin: 5px;
+padding: 5px;
+margin-right: auto;
+margin-left : auto;
+font-family: 'Arial',YuGothic,'Yu Gothic','ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN','メイリオ', Meiryo,'ＭＳ ゴシック',sans-serif;
+}
+}
